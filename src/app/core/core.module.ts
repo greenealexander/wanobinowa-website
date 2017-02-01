@@ -1,11 +1,22 @@
 import { NgModule, ModuleWithProviders, SkipSelf, Optional } from '@angular/core';
 
+// Services
 import { FirebaseConfigService } from './firebase-config.service';
+import { ModalService } from './modal.service';
+import { ImagesService } from './images.service';
+import { InquiryService } from './inquiry.service';
+
+// Components
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
     imports: [],
-    exports: [],
-    declarations:  []
+    exports: [
+        NavbarComponent
+    ],
+    declarations:  [
+        NavbarComponent
+    ]
 })
 export class CoreModule { 
     constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
@@ -17,7 +28,7 @@ export class CoreModule {
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: CoreModule,
-            providers: [ FirebaseConfigService ]
+            providers: [ FirebaseConfigService, ModalService, ImagesService, InquiryService ]
         };
     }
 }

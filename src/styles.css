@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f9f8f7;
+}
+
+.highlight {
+    color: darkorange;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.wanobinowa {
+    font-family: 'Molle', cursive;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 50px;
+    height: 85vh;
+}
+
+.modal-active {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .loading {
+        font-size: 28px;
+    }
+}

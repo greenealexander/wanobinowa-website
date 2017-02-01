@@ -1,0 +1,85 @@
+.home-btn {
+    font-size: 30px;
+    height: 60px;
+    color: black;
+    border: none;
+    background: transparent;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.header-nav {
+    width: 100vw;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: white;
+    .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        .links-container {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            .link-outer {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+                width: 100px;
+                height: 60px;
+                line-height: 80px;
+                &:hover {
+                    cursor: pointer;
+                    background: RGB(253, 140, 37);
+                    .nav-link {
+                        color: white;
+                    }
+                }
+                .nav-link {
+                    -ms-flex-item-align: center;
+                    -ms-grid-row-align: center;
+                    align-self: center;
+                    font-size: 18px;
+                    width: 80px;
+                    text-align: center;
+                    color: black;
+                    text-decoration: none;
+                    -webkit-transition: all 0.2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<div class="form-container" [style.display]="isActive()">
+    <div class="form">
+        <section class="one">
+            <div>
+                <input [(ngModel)]="name" type="text" placeholder="Your name"> &nbsp;<span>*</span>
+            </div>
+            <div>
+                <input [(ngModel)]="email" type="email" placeholder="Your email"> &nbsp;<span>*</span>
+            </div>
+        </section>
+        <section class="two">
+            <div>
+                <ul>
+                    <li><label><input [(ngModel)]="art" type="checkbox" value="Art">Art</label></li>
+                    <li><label><input [(ngModel)]="arch" type="checkbox" value="Architecture">Houses & Rooms</label></li>
+                    <li><label><input [(ngModel)]="fab" type="checkbox" value="Fabrics">Fabrics</label></li>
+                </ul>
+            </div>
+            <!--<div class="div-2">
+                <button class="btn-addImages">
+                    <i class="fa fa-picture-o"></i>
+                    <span>Select Liked Image(s)</span>
+                </button>
+            </div>-->
+        </section>
+        <section class="three">
+            <textarea (keydown)="checkCount()" (keyup)="checkCount()" [(ngModel)]="description" rows="5" cols="1" placeholder="Description/Questions" maxlength="300"></textarea>
+            <span>{{ charCount }}/300</span>
+        </section>
+        <div class="button-container">
+            <button class="btn btn-cancel" (click)="hideForm()">Cancel</button>
+            <button class=" btn btn-submit" (click)="submit()"><i class="fa fa-paper-plane"></i>Send</button>
+        </div>
+    </div>
+</div>

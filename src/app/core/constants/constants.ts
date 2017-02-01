@@ -1,7 +1,7 @@
 export const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyC_bMUs_EXoPttoYFQh6dQDkxOZvgI_Xi0",
-    authDomain: "wa-no-wa.firebaseapp.com",
-    databaseURL: "https://wa-no-wa.firebaseio.com",
-    storageBucket: "wa-no-wa.appspot.com",
-    messagingSenderId: "307487765074"
+    apiKey: "AIzaSyBSoYBOduekAGsJRP1gO5phxBnUqAn4jUU",
+    authDomain: "wa-no-bi-no-wa.firebaseapp.com",
+    databaseURL: "https://wa-no-bi-no-wa.firebaseio.com",
+    storageBucket: "wa-no-bi-no-wa.appspot.com",
+    messagingSenderId: "252584151526"
   };

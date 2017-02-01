@@ -1,0 +1,99 @@
+.loading {
+    background: #f9f8f7;
+    color: black;
+}
+
+.gallery-container {
+    min-height: 91vh;
+    background: #f9f8f7;
+    .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        .tile {
+            margin: 5px 0;
+            overflow: hidden;
+            width: 32%;
+            height: 200px;
+            background: black;
+            &:hover {
+                cursor: pointer;
+            }
+            .image {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+.formBtn {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+    height: 70px;
+    width: 70px;
+    border: none;
+    border-radius: 35px;
+    background: darkorange;
+    font-size: 25px;
+    color: white;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        cursor: pointer;
+        background: RGB(253, 151, 39);
+    }
+    &:focus {
+        outline: none;
+    }
+    .formBtn-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        span {
+            font-size: 12px;
+            font-weight: 300;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .formBtn {
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+        font-size: 18px;
+        right: 20px;
+        bottom: 20px;
+        span {
+            font-size: 10px;
+        }
+    }
+}

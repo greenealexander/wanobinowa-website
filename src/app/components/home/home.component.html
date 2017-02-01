@@ -1,0 +1,61 @@
+<header class="about-text" ngsReveal>
+    <span class="header">
+        Bring Home a Slice of Japan
+    </span>
+    <p>Our mission is to supply <span class="highlight">traditional</span> Japanese arts and goods that <br>bring joy, <span class="highlight">luxury</span>, and a wealth of <span class="highlight">peaceful</span> feelings <br>into your life and living spaces.</p>
+    <div class="btn-container">
+        <span>Scroll to see showcases</span>
+        <div class="icon-container">
+            <i class="fa fa-chevron-down"></i>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+</header>
+
+<section class="section art">
+    <div class="container">
+        <span class="section-lead">Art</span>
+        <a class="see-all" (click)="routeArtGallery()">See all</a>
+        <div class="images-container" ngsReveal>
+            <div class="tile" *ngFor="let image of artImages" (click)="selectImage(image)">
+                <img src="{{ image.url }}" alt="Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section arch">
+    <div class="container">
+        <span class="section-lead">Houses & Rooms</span>
+        <a class="see-all" (click)="routeArchGallery()">See all</a>
+        <div class="images-container" ngsReveal>
+            <div class="tile" *ngFor="let image of archImages" (click)="selectImage(image)">
+                <img src="{{ image.url }}" alt="Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section fab">
+    <div class="container">
+        <span class="section-lead">Fabrics</span>
+        <a class="see-all" (click)="routeFabGallery()">See all</a>
+        <div class="images-container" ngsReveal>
+            <div class="tile" *ngFor="let image of fabImages" (click)="selectImage(image)">
+                <img src="{{ image.url }}" alt="Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<button class="formBtn" (click)="showForm()">
+    <div class="formBtn-content">   
+        <i class="fa fa-envelope"></i>
+        <span>
+            Inquiry        
+        </span>
+    </div>
+</button>
+
+<modal [image]="selectedImage" (clearImage)="clearImage()"></modal>
+<contact></contact>

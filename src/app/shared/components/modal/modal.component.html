@@ -1,0 +1,11 @@
+<div class="modal" *ngIf="image">
+    <div class="modal-content">
+        <div class="image">
+            <img src="{{ image.url }}" alt="Image">
+        </div>
+        <i class="fa fa-times" (click)="close()"></i>
+        <div class="text-container">
+            <p>{{ image.description }}</p>
+        </div>
+    </div>
+</div>

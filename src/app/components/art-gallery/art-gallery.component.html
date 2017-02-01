@@ -1,0 +1,21 @@
+<div class="loading" *ngIf="images.length == 0">Loading...Please wait</div>
+
+<div class="gallery-container" *ngIf="images.length > 0">
+    <div class="container">
+        <div class="tile" *ngFor="let image of images" (click)="selectImage(image)" [ngsRevealSet]="{ reset:false}" [ngsInterval]="25" [ngsSelector]="'.tile'">
+            <div class="image">
+                <img src="{{ image.url }}" alt="Image">
+            </div>
+        </div>
+    </div>
+</div>
+<button class="formBtn" (click)="showForm()">
+    <div class="formBtn-content">   
+        <i class="fa fa-envelope"></i>
+        <span>
+            Inquiry        
+        </span>
+    </div>
+</button>
+<modal [image]="selectedImage" (clearImage)="clearImage()"></modal>
+<contact></contact>
